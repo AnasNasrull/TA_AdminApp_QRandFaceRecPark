@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/border_item_info"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/pl_dt"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Plat Nomor"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txt_pl_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/pl_dt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="BE 1234 AA"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/nm_dt"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Pengendara"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pl_dt"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txt_nm_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/nm_dt"
+        app:layout_constraintTop_toBottomOf="@id/txt_pl_dt"
+        android:text="ANAS"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/nim_dt"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="NIM"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nm_dt"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txt_nim_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/nim_dt"
+        app:layout_constraintTop_toBottomOf="@id/txt_nm_dt"
+        android:text="14117028"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/wm_dt"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Waktu Masuk"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nim_dt"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txt_wm_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/wm_dt"
+        app:layout_constraintTop_toBottomOf="@id/txt_nim_dt"
+        android:text="12:12:12"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/wt_dt"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Waktu Keluar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wm_dt"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/txt_wt_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wt_dt"
+        app:layout_constraintTop_toBottomOf="@id/txt_wm_dt"
+        android:text="12:12:12"
+        android:textSize="16sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

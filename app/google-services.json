@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "155184207112",
+    "firebase_url": "https://park-app-effdb-default-rtdb.firebaseio.com",
+    "project_id": "park-app-effdb",
+    "storage_bucket": "park-app-effdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155184207112:android:f4bc79e227a9c8e19ec8bd",
+        "android_client_info": {
+          "package_name": "com.example.park_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155184207112-74dket28ej9bvfl3l37u9e6vjugu6d3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKKIRtlD112MZODsczTJyIFFMuWK1EaqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155184207112-74dket28ej9bvfl3l37u9e6vjugu6d3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155184207112:android:f8f17dd6bf40ead39ec8bd",
+        "android_client_info": {
+          "package_name": "com.example.park_app_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155184207112-74dket28ej9bvfl3l37u9e6vjugu6d3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKKIRtlD112MZODsczTJyIFFMuWK1EaqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155184207112-74dket28ej9bvfl3l37u9e6vjugu6d3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
