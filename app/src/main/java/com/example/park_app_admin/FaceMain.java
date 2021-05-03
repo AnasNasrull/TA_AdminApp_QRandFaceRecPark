@@ -87,7 +87,7 @@ import java.util.regex.Pattern;
 public class FaceMain extends AppCompatActivity implements
         ActivityCompat.OnRequestPermissionsResultCallback{
 
-    String key;
+    String key, plat;
 
     private static final String TAG = "FaceMain";
     private static final int INPUT_SIZE = 500;
@@ -136,6 +136,7 @@ public class FaceMain extends AppCompatActivity implements
 
         String nim = getIntent().getStringExtra("nim");
         key = getIntent().getStringExtra("key");
+        plat = getIntent().getStringExtra("plat");
         File image_folder = new File(Constants.getDLibDirectoryPath() + "/", "images" );
         if (!image_folder.exists()) {
             image_folder.mkdirs();
@@ -528,6 +529,19 @@ public class FaceMain extends AppCompatActivity implements
                             Map<String, Object> postValues = new HashMap<String, Object>();
                             postValues.put("waktu_keluar", wkt_klr);
                             Ref.child(tgl).child(key).updateChildren(postValues);
+                        }
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                        }
+                    });
+
+                    final DatabaseReference myRef2 = FirebaseDatabase.getInstance().getReference("Kendaraan");
+                    myRef2.child("Data_Plat").addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            Map<String, Object> postStatus = new HashMap<String, Object>();
+                            postStatus.put("status", "-");
+                            myRef2.child("Data_Plat").child(plat).updateChildren(postStatus);
                         }
                         @Override
                         public void onCancelled(DatabaseError databaseError) {

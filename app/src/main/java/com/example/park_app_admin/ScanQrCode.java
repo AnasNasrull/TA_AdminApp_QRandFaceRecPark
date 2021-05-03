@@ -83,7 +83,7 @@ public class ScanQrCode extends AppCompatActivity implements ZXingScannerView.Re
         Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+7:00"));
         String tm = new SimpleDateFormat("HHmmss").format(cal.getTime());
         String tgl = dt.format(c);
-        String chKey = tgl + "" + tm;
+        //String chKey = tgl + "" + tm;
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("Parkir");
@@ -92,10 +92,12 @@ public class ScanQrCode extends AppCompatActivity implements ZXingScannerView.Re
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String data = dataSnapshot.child("NIM").getValue().toString();
+                String plat = dataSnapshot.child("plat").getValue().toString();
 
                 Intent intent = new Intent(getBaseContext(), FaceMain.class);
                 intent.putExtra("nim", data);
                 intent.putExtra("key", key);
+                intent.putExtra("plat", plat);
                 startActivity(intent);
             }
             @Override

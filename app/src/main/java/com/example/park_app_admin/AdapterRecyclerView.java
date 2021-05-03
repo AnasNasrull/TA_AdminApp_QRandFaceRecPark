@@ -67,6 +67,7 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
         final String keluar = ": " + data.get(position).getWaktu_keluar();
         final String key = data.get(position).getKey();
         final String kNim = data.get(position).getNIM();
+        final String status = data.get(position).getPlat();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Data_Pengguna");
@@ -133,6 +134,19 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
                                     Map<String, Object> postValues = new HashMap<String, Object>();
                                     postValues.put("waktu_keluar", wkt_klr);
                                     Ref.child(tgl).child(key).updateChildren(postValues);
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+                                }
+                            });
+
+                            final DatabaseReference myRef2 = FirebaseDatabase.getInstance().getReference("Kendaraan");
+                            myRef2.child("Data_Plat").addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    Map<String, Object> postStatus = new HashMap<String, Object>();
+                                    postStatus.put("status", "-");
+                                    myRef2.child("Data_Plat").child(status).updateChildren(postStatus);
                                 }
                                 @Override
                                 public void onCancelled(DatabaseError databaseError) {
