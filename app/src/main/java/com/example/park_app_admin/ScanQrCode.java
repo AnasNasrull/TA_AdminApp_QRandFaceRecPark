@@ -30,8 +30,6 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class ScanQrCode extends AppCompatActivity implements ZXingScannerView.ResultHandler {
     private ZXingScannerView mScannerView;
 
-    String nim;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

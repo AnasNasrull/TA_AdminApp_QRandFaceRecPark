@@ -345,7 +345,7 @@ public class FaceMain extends AppCompatActivity implements
         return mBackgroundHandler;
     }*/
 
-    private String getResultMessage(ArrayList<String> names) {
+    /*private String getResultMessage(ArrayList<String> names) {
         String msg = "";
         if (names.isEmpty()) {
             msg = "Wajah Tidak Dikenali!";
@@ -414,7 +414,7 @@ public class FaceMain extends AppCompatActivity implements
             }
         }
         return msg;
-    }
+    }*/
 
     private class recognizeAsync extends AsyncTask<Bitmap, Void, ArrayList<String>> {
         ProgressDialog dialog = new ProgressDialog(FaceMain.this);

@@ -26,10 +26,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-/**
- * Created by darrenl on 2016/3/30.
- * Modified by Gaurav on Feb 23, 2018
- */
 public class FileUtils {
     @NonNull
     public static final void copyFileFromRawToOthers(@NonNull final Context context, @RawRes int id, @NonNull final String targetPath) {
